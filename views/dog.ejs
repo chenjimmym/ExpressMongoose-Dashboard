@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dog</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <% for (var i in dog){ %>
+            <p><%= dog[i].name %> - <%= dog[i].color %></p>
+            <form action="/dogs/delete/<%= dog[i]._id %>" method="post">
+                <input type="submit" value="Delete">
+            </form>
+        <% } %>
+
+    </body>
+</html>

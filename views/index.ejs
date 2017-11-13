@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>List of Dogs</h1>
+        <% for (var i in dogs){ %>
+            <p><%= dogs[i].name %> - <%= dogs[i].color %> - <a href="/dogs/<%= dogs[i]._id %>"><%= dogs[i]._id %></a></p>
+        <% } %>
+        <a href="/dogs/new"><button>Add New Dog</button></a>
+    </body>
+</html>
